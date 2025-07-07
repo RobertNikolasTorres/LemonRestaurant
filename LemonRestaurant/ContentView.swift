@@ -8,14 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            
+            VStack {
+                Image("littleLemonLogo")
+                Image(systemName: "keyboard")
+                    .imageScale(.large)
+                    .foregroundStyle(.red)
+                Text("Hello, Cohort 1!")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .foregroundColor(.red)
+                NavigationLink(destination: AboutView()) {
+                    Text("Go to About")
+                }
+            }
+            .padding()
+            .navigationTitle("Home")
         }
-        .padding()
     }
 }
 
