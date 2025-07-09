@@ -12,12 +12,9 @@ struct MainView: View {
     @State private var userName: String = ""
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             if isLoggedIn == true {
                 VStack {
-                    Text("Welcome, \(userName)")
-                        .font(.title)
-                    
                     NavigationLink("Make a reservation", destination: ReservationForm())
                     
                     NavigationLink("About us", destination: AboutView())
